@@ -20,7 +20,6 @@ const ProductList = ({ setCart }) => {
         }));
     };
     
-
     return (
         <div className="product-list">
             <h2>Products</h2>

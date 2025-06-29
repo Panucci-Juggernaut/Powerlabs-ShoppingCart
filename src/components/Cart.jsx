@@ -1,6 +1,7 @@
 const Cart = ({ cart, setCart, discount }) => {
 
     const updateQuantity = (productId, delta) => {
+
         setCart(prev => {
         const newQty = (prev[productId]?.quantity || 0) + delta;
         if (newQty <= 0) {
@@ -25,6 +26,7 @@ const Cart = ({ cart, setCart, discount }) => {
 
     const total = Object.values(cart).reduce((sum, item) => sum + item.price * item.quantity, 0);
     const discountedTotal = total - total * discount;
+    
     return (
         <div className="cart">
             <h2>Cart</h2>
